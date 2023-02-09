@@ -13,12 +13,16 @@
    <br>
    <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>
    <button onclick="makeRed()">Make Red</button>
+   <button id="make-blue">Make Blue</button>
   
     
     <script src="js/event.js"></script>
     <script>
-        function makeRed(){
-            document.body.style.backgroundColor='red';
+        const makeBlueButton= document.getElementById('make-blue');
+        makeBlueButton.onclick = makeBlue;
+
+        function makeBlue(){
+            document.body.style.backgroundColor = 'blue';
         }
     </script>
 </body>
