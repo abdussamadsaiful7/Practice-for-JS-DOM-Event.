@@ -4,6 +4,7 @@
 //<button onclick="console.log(65)">Another button</button>
 
 //option-2, add onclick function.
+//Important = [we will use this sometimes];
 //  <button onclick="makeRed()">Make Red</button>
 function makeRed(){
     document.body.style.backgroundColor='red';
@@ -40,7 +41,8 @@ const makeGreenButton = document.getElementById('make-green');
         });
 
 
-//option-4, final one
+//option-4, final one,
+//Important = [we will use this sometimes];
 document.getElementById('make-goldenrod').addEventListener('click', function(){
     document.body.style.backgroundColor = 'goldenrod';
  });
