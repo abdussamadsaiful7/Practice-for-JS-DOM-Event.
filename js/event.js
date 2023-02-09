@@ -32,4 +32,7 @@ const makeBlueButton= document.getElementById('make-blue');
 
         function makePink(){
             document.body.style.backgroundColor = 'pink';
-        }
+        };
+
+//option-4, another 
+

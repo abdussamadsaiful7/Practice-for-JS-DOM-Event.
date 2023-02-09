@@ -19,10 +19,19 @@
    <button id="make-purple"> Make Purple</button>
   <!-- option-4 -->
     <button id="make-pink">Make Pink</button>
-    
+    <!-- option-4,Another -->
+    <button id="make-green">Make green</button>
+
+    <!-- option-4, final one -->
+
+
+
     <script src="js/event.js"></script>
     <script>
-        
+        const makeGreenButton = document.getElementById('make-green');
+        makeGreenButton.addEventListener('click', function makeGreen(){
+            document.body.style.backgroundColor='green';
+        }) 
         
     </script>
 </body>
