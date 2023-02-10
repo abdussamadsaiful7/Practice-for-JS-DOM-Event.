@@ -8,20 +8,32 @@
 </head>
 <body>
     <h1>Please add your Comments</h1>
-    <div>
+    <div id="comment-container"> 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt assumenda quisquam, pariatur, odit unde temporibus quo voluptas exercitationem perferendis, dicta omnis deleniti. Eius distinctio asperiores, eligendi rerum quas nulla, ducimus esse et quidem quam tempore, alias autem doloribus optio odit sunt quo voluptas voluptatibus excepturi mollitia! Accusamus veritatis beatae vel.</p>
         <p>Aliquam corporis deleniti delectus mollitia quaerat ab in, illum blanditiis quasi amet animi quas quidem ea porro, iure placeat expedita error, nihil voluptates fugiat. At commodi consectetur tempore perferendis, suscipit sed laudantium, quis ipsa unde voluptate corporis. Voluptates laboriosam voluptate quam ducimus, nisi perferendis! Corporis ipsa deleniti eaque ea hic.</p>
         <p>Exercitationem, eveniet temporibus quibusdam quos eos reprehenderit provident voluptatum natus officiis sapiente consequuntur minus, maiores vitae voluptatibus obcaecati quod vel pariatur vero suscipit quaerat sit atque autem nemo quam? Quod blanditiis sint consequatur illum, magnam cum sapiente aperiam fugiat commodi? Aliquid voluptate molestias suscipit excepturi! Non porro impedit laudantium asperiores!</p>
     </div>
     <div>
-        <textarea name="" id="new-comment" cols="60" rows="6"></textarea> <br>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea> <br>
         <button id="btn-post">Post</button>
     </div>
 
     <script>
-        //step-1, add even listener to the post button
+        //step-1: add even listener to the post button
         document.getElementById('btn-post').addEventListener(click, function(){
-
+        // step-2: get the comments inside the text area,
+        const commentBox = document.getElementById('new-comment');
+        const newComment = commentBox.value;
+        console.log(newComment);
+        
+        // step-3: set the comment inside the comment container,
+        //1, get the comment container
+        //2, create a new element
+        //3, set the textl
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild('p');
         })
     </script>
 </body>
