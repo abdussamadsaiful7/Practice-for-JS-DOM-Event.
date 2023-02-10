@@ -5,11 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Bubble</title>
+    <style>
+
+        #item-2{
+            border: 2px solid rebeccapurple;
+        }
+        ul{ border: 2px solid tomato;
+
+        } 
+        
+        body{ border: 2px solid green;
+
+        } 
+        
+        section{ border: 2px solid blue;
+
+        }
+    </style>
 </head>
-<body>
+<body id="body">
     <h1>Explore Event Bubble</h1>
-    <section>
-        <ul>
+    <section id="list-container">
+        <ul id="list-ul">
             <li id="item-1">Lorem ipsum dolor sit amet.</li>
             <li id="item-2">Rerum veritatis ullam obcaecati repellat!</li>
             <li id="item-3">Dignissimos veniam consequatur sed quibusdam?</li>
@@ -19,9 +36,18 @@
         </ul>
     </section>
     <script>
-        document.getElementById('item-2').addEventListener('click', function(){
-            console.log('Item-2 clicked');
-        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            // event.stopPropagation();
+            // event1.stopImmediatePropagation();
+            // console.log('samad click korbo?')
+        });
+        document.getElementById('list-ul').addEventListener('click', function(){
+            
+            console.log('saiful stop kor')
+        });
+        document.getElementById('list-container').addEventListener('click', function(){
+
+        });
     </script>
 </body>
 </html>
