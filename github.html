@@ -8,9 +8,16 @@
 </head>
 <body>
     <h1 id="secret-info">My secret info</h1>
-    <input type = "text" placeholder="Please type delete">
+    <input id="delete-confirm" type = "text" placeholder="Please type delete">
     <button id="btn-delete" disabled >Delete</button>
     <script>
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const deleteButton = document.getElementById('btn-delete');
+            if(text == 'delete'){
+                deleteButton.removeAttribute('disabled')
+            }
+        })
         document.getElementById('btn-delete').addEventListener('click', function(){
           const secret = document.getElementById('secret-info');
           secret.style.display = 'none';
